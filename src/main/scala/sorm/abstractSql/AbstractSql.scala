@@ -93,6 +93,7 @@ object AbstractSql {
   case object Smaller extends Operator
   case object SmallerOrEqual extends Operator
   case object Like extends Operator
+  case object IgnoreCaseLike extends Operator
   case object NotLike extends Operator
   case object Regexp extends Operator
   case object NotRegexp extends Operator

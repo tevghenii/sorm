@@ -20,6 +20,7 @@ object SqlComposition {
         case Smaller        => Sql.Smaller
         case SmallerOrEqual => Sql.SmallerOrEqual
         case Like           => Sql.Like
+        case IgnoreCaseLike => Sql.IgnoreCaseLike
         case NotLike        => Sql.NotLike
         case Regexp         => Sql.Regexp
         case NotRegexp      => Sql.NotRegexp

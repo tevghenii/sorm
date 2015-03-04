@@ -17,6 +17,7 @@ object Dsl {
     def larger(v: Any)         = Larger(p, v)
     def largerOrEqual(v: Any)  = LargerOrEqual(p, v)
     def like(v: Any)           = Like(p, v)           
+    def ignoreCaseLike(v: Any) = IgnoreCaseLike(p, v)
     def notLike(v: Any)        = NotLike(p, v)        
     def regex(v: Any)          = Regex(p, v)          
     def notRegex(v: Any)       = NotRegex(p, v)       

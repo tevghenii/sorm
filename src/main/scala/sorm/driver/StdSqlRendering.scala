@@ -155,6 +155,8 @@ trait StdSqlRendering {
           "<="
         case Like =>
           "LIKE"
+        case IgnoreCaseLike =>
+          "LIKE"
         case NotLike =>
           "NOT LIKE"
         case Regexp =>

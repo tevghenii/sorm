@@ -117,6 +117,7 @@ class Querier [ T <: AnyRef : TypeTag ] ( query : Query, connector : Connector )
                 case Querier.Smaller(p, v)        => (p, v, Smaller)
                 case Querier.SmallerOrEqual(p, v) => (p, v, SmallerOrEqual)
                 case Querier.Like(p, v)           => (p, v, Like) 
+                case Querier.IgnoreCaseLike(p, v) => (p, v, IgnoreCaseLike) 
                 case Querier.NotLike(p, v)        => (p, v, NotLike) 
                 case Querier.Regex(p, v)          => (p, v, Regex) 
                 case Querier.NotRegex(p, v)       => (p, v, NotRegex) 
@@ -178,6 +179,9 @@ class Querier [ T <: AnyRef : TypeTag ] ( query : Query, connector : Connector )
   def whereLike( p : String, v : Any ) 
     = where( p, v, Like )
 
+  def whereIgnoreCaseLike( p : String, v : Any ) 
+    = where( p, v, IgnoreCaseLike )    
+
   def whereNotLike( p : String, v : Any ) 
     = where( p, v, NotLike )
 
@@ -227,6 +231,7 @@ object Querier {
   case class Smaller ( p : String, v : Any ) extends Filter
   case class SmallerOrEqual ( p : String, v : Any ) extends Filter
   case class Like ( p : String, v : Any ) extends Filter
+  case class IgnoreCaseLike ( p : String, v : Any ) extends Filter
   case class NotLike ( p : String, v : Any ) extends Filter
   case class Regex ( p : String, v : Any ) extends Filter
   case class NotRegex ( p : String, v : Any ) extends Filter

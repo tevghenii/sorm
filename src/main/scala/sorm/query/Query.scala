@@ -54,6 +54,7 @@ object Query {
   case object Smaller extends Operator
   case object SmallerOrEqual extends Operator
   case object Like extends Operator
+  case object IgnoreCaseLike extends Operator
   case object NotLike extends Operator
   case object Regex extends Operator
   case object NotRegex extends Operator

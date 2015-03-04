@@ -77,6 +77,9 @@ object AbstractSqlComposition extends Logging {
         case Filter(Like, m: ValueMapping, v) => 
           comparing( m, AS.Like, v )
 
+        case Filter(IgnoreCaseLike, m: ValueMapping, v) => 
+          comparing( m, AS.IgnoreCaseLike, v )          
+
         case Filter(NotLike, m: ValueMapping, v) => 
           comparing( m, AS.NotLike, v )
 

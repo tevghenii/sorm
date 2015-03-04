@@ -153,6 +153,7 @@ object Sql {
   case object Smaller extends ComparisonOperator
   case object SmallerOrEqual extends ComparisonOperator
   case object Like extends ComparisonOperator
+  case object IgnoreCaseLike extends ComparisonOperator
   case object NotLike extends ComparisonOperator
   case object Regexp extends ComparisonOperator
   case object NotRegexp extends ComparisonOperator
